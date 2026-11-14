@@ -190,7 +190,7 @@
       <div class="flex items-center justify-between h-20">
 
         <!-- Brand Logo (Minimalist Tooth line icon matching reference) -->
-        <a href="#hero" class="flex items-center gap-2.5 group">
+        <a href="#hero" id="siteLogo" class="flex items-center gap-2.5 group">
           <div
             class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center text-brand-900 group-hover:bg-brand-900 group-hover:text-white transition-colors duration-300">
             <!-- Precise Tooth SVG from reference -->
@@ -244,7 +244,7 @@
 
       <!-- Top Bar inside Fullscreen Drawer -->
       <div class="flex items-center justify-between pb-6 border-b border-blue-200/60">
-        <a href="#hero" class="flex items-center gap-2.5 mobile-nav-link">
+        <a href="#hero" id="mobileSiteLogo" class="flex items-center gap-2.5 mobile-nav-link">
           <div class="w-10 h-10 rounded-xl bg-brand-900 flex items-center justify-center text-white shadow-sm">
             <svg class="w-6 h-6 stroke-current fill-none stroke-[2.2]" viewBox="0 0 24 24">
               <path
@@ -1913,6 +1913,13 @@
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
               anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
+                if (this.id === 'siteLogo' || this.id === 'mobileSiteLogo' || targetId === '#hero') {
+                  e.preventDefault();
+                  closeMobileMenu();
+                  history.replaceState(null, '', window.location.pathname + window.location.search);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  return;
+                }
                 if (targetId === '#') return;
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
@@ -1932,6 +1939,26 @@
                   history.pushState(null, null, targetId);
                 }
               });
+            });
+
+            // Keep hash links useful after refresh and browser back/forward navigation.
+            function scrollToCurrentHash(behavior = 'smooth') {
+              const targetId = decodeURIComponent(window.location.hash.slice(1));
+              if (!targetId) return;
+              const targetElement = document.getElementById(targetId);
+              if (!targetElement) return;
+
+              const headerOffset = 80;
+              const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerOffset;
+              window.scrollTo({ top: Math.max(0, offsetPosition), behavior });
+            }
+
+            window.addEventListener('popstate', () => scrollToCurrentHash());
+            window.addEventListener('load', () => {
+              if (window.location.hash) {
+                // Wait for images and layout to settle before positioning the section.
+                requestAnimationFrame(() => requestAnimationFrame(() => scrollToCurrentHash()));
+              }
             });
 
             // Contact Us Modal Logic
