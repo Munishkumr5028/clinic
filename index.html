@@ -124,6 +124,11 @@
     }
 
     /* Smooth interactive micro-behaviors */
+    /* Mobile font-size 16px on inputs prevents iOS/Android auto-zoom on focus */
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+
     .pill-badge {
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -147,6 +152,7 @@
       background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px);
       background-size: 24px 24px;
     }
+
   </style>
 </head>
 
@@ -451,33 +457,33 @@
 
           <!-- CARD 1: Dental Implants -->
           <article
-            class="min-w-[85%] sm:min-w-[340px] lg:min-w-[calc(33.333%-1.35rem)] flex-shrink-0 snap-start bg-[#DEE7F0] rounded-[2rem] p-7 flex flex-col justify-between floating-card border border-white/70 relative overflow-hidden group">
-            <div>
-              <h3 class="text-2xl font-bold text-slate-900 tracking-tight mb-4">
+            class="w-[85vw] max-w-[320px] sm:w-[340px] sm:max-w-none lg:w-[calc(33.333%-1.35rem)] flex-shrink-0 snap-start bg-[#DEE7F0] rounded-[2rem] p-5 sm:p-7 flex flex-col justify-between floating-card border border-white/70 relative overflow-hidden group">
+            <div class="w-full">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-4">
                 Dental Implants
               </h3>
 
               <!-- Tags / Pills -->
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Single Tooth
                 </span>
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Full Arch
                 </span>
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Bone Graft
                 </span>
               </div>
             </div>
 
             <!-- 3D Dental Implant Image -->
-            <div class="my-4 flex justify-center items-center h-64 overflow-hidden rounded-2xl bg-white/20">
+            <div class="my-4 flex justify-center items-center h-52 sm:h-64 w-full overflow-hidden rounded-2xl bg-white/20">
               <img src="img/implant.jpg" alt="Titanium dental implant with 3D detached ceramic crown"
-                class="h-full w-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500 ease-out"
+                class="h-full w-full max-w-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500 ease-out"
                 loading="lazy">
             </div>
 
@@ -496,33 +502,33 @@
 
           <!-- CARD 2: Teeth Alignment -->
           <article
-            class="min-w-[85%] sm:min-w-[340px] lg:min-w-[calc(33.333%-1.35rem)] flex-shrink-0 snap-start bg-[#DEE7F0] rounded-[2rem] p-7 flex flex-col justify-between floating-card border border-white/70 relative overflow-hidden group">
-            <div>
-              <h3 class="text-2xl font-bold text-slate-900 tracking-tight mb-4">
+            class="w-[85vw] max-w-[320px] sm:w-[340px] sm:max-w-none lg:w-[calc(33.333%-1.35rem)] flex-shrink-0 snap-start bg-[#DEE7F0] rounded-[2rem] p-5 sm:p-7 flex flex-col justify-between floating-card border border-white/70 relative overflow-hidden group">
+            <div class="w-full">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-4">
                 Teeth alignment
               </h3>
 
               <!-- Tags / Pills -->
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Clear Aligners
                 </span>
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Braces
                 </span>
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Retainers
                 </span>
               </div>
             </div>
 
             <!-- 3D Clear Aligners Image -->
-            <div class="my-4 flex justify-center items-center h-64 overflow-hidden rounded-2xl bg-white/20">
+            <div class="my-4 flex justify-center items-center h-52 sm:h-64 w-full overflow-hidden rounded-2xl bg-white/20">
               <img src="img/aligners.jpg" alt="Clear invisible dental teeth aligners retainer 3D view"
-                class="h-full w-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500 ease-out"
+                class="h-full w-full max-w-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500 ease-out"
                 loading="lazy">
             </div>
 
@@ -541,24 +547,24 @@
 
           <!-- CARD 3: Therapeutic Dentistry -->
           <article
-            class="min-w-[85%] sm:min-w-[340px] lg:min-w-[calc(33.333%-1.35rem)] flex-shrink-0 snap-start bg-[#DEE7F0] rounded-[2rem] p-7 flex flex-col justify-between floating-card border border-white/70 relative overflow-hidden group">
-            <div>
-              <h3 class="text-2xl font-bold text-slate-900 tracking-tight mb-4">
+            class="w-[85vw] max-w-[320px] sm:w-[340px] sm:max-w-none lg:w-[calc(33.333%-1.35rem)] flex-shrink-0 snap-start bg-[#DEE7F0] rounded-[2rem] p-5 sm:p-7 flex flex-col justify-between floating-card border border-white/70 relative overflow-hidden group">
+            <div class="w-full">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-4">
                 Therapeutic dentistry
               </h3>
 
               <!-- Tags / Pills -->
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Root Canal
                 </span>
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Fillings
                 </span>
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Caries Treatment
                 </span>
               </div>
@@ -566,7 +572,7 @@
 
             <!-- 3D Glossy Human Tooth Render Graphic -->
             <div
-              class="my-4 flex justify-center items-center h-64 bg-gradient-to-tr from-[#cfddeb] to-[#e4eef8] rounded-2xl relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
+              class="my-4 flex justify-center items-center h-52 sm:h-64 bg-gradient-to-tr from-[#cfddeb] to-[#e4eef8] rounded-2xl relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
               <div class="relative w-44 h-44 drop-shadow-2xl">
                 <svg viewBox="0 0 200 200" class="w-full h-full filter drop-shadow-[0_15px_20px_rgba(30,64,175,0.15)]">
                   <defs>
@@ -609,24 +615,24 @@
 
           <!-- CARD 4: Aesthetic Veneers & Smile Makeover (New Card) -->
           <article
-            class="min-w-[85%] sm:min-w-[340px] lg:min-w-[calc(33.333%-1.35rem)] flex-shrink-0 snap-start bg-[#DEE7F0] rounded-[2rem] p-7 flex flex-col justify-between floating-card border border-white/70 relative overflow-hidden group">
-            <div>
-              <h3 class="text-2xl font-bold text-slate-900 tracking-tight mb-4">
+            class="w-[85vw] max-w-[320px] sm:w-[340px] sm:max-w-none lg:w-[calc(33.333%-1.35rem)] flex-shrink-0 snap-start bg-[#DEE7F0] rounded-[2rem] p-5 sm:p-7 flex flex-col justify-between floating-card border border-white/70 relative overflow-hidden group">
+            <div class="w-full">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-4">
                 Aesthetic Veneers
               </h3>
 
               <!-- Tags / Pills -->
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Porcelain Veneers
                 </span>
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Laser Whitening
                 </span>
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Gum Sculpting
                 </span>
               </div>
@@ -634,7 +640,7 @@
 
             <!-- Aesthetic Smile Graphic -->
             <div
-              class="my-4 flex flex-col justify-center items-center h-64 bg-gradient-to-tr from-[#cfddeb] to-[#e4eef8] rounded-2xl relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 p-6 text-center">
+              class="my-4 flex flex-col justify-center items-center h-52 sm:h-64 bg-gradient-to-tr from-[#cfddeb] to-[#e4eef8] rounded-2xl relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 p-6 text-center">
               <div
                 class="w-24 h-24 rounded-full bg-white/80 shadow-soft flex items-center justify-center text-brand-700 mb-3 group-hover:rotate-6 transition-transform">
                 <i data-lucide="sparkles" class="w-12 h-12 stroke-[1.8]"></i>
@@ -658,24 +664,24 @@
 
           <!-- CARD 5: Pediatric & Preventive Dentistry (New Card) -->
           <article
-            class="min-w-[85%] sm:min-w-[340px] lg:min-w-[calc(33.333%-1.35rem)] flex-shrink-0 snap-start bg-[#DEE7F0] rounded-[2rem] p-7 flex flex-col justify-between floating-card border border-white/70 relative overflow-hidden group">
-            <div>
-              <h3 class="text-2xl font-bold text-slate-900 tracking-tight mb-4">
+            class="w-[85vw] max-w-[320px] sm:w-[340px] sm:max-w-none lg:w-[calc(33.333%-1.35rem)] flex-shrink-0 snap-start bg-[#DEE7F0] rounded-[2rem] p-5 sm:p-7 flex flex-col justify-between floating-card border border-white/70 relative overflow-hidden group">
+            <div class="w-full">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-4">
                 Pediatric & Hygiene
               </h3>
 
               <!-- Tags / Pills -->
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Gentle Cleaning
                 </span>
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Fluoride Shield
                 </span>
                 <span
-                  class="pill-badge px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
+                  class="pill-badge px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/70 backdrop-blur text-xs font-semibold text-slate-700 shadow-2xs cursor-pointer">
                   Fissure Sealants
                 </span>
               </div>
@@ -683,7 +689,7 @@
 
             <!-- Pediatric Graphic -->
             <div
-              class="my-4 flex flex-col justify-center items-center h-64 bg-gradient-to-tr from-[#cfddeb] to-[#e4eef8] rounded-2xl relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 p-6 text-center">
+              class="my-4 flex flex-col justify-center items-center h-52 sm:h-64 bg-gradient-to-tr from-[#cfddeb] to-[#e4eef8] rounded-2xl relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 p-6 text-center">
               <div
                 class="w-24 h-24 rounded-full bg-white/80 shadow-soft flex items-center justify-center text-brand-700 mb-3 group-hover:-rotate-6 transition-transform">
                 <i data-lucide="heart-pulse" class="w-12 h-12 stroke-[1.8]"></i>
@@ -1204,7 +1210,7 @@
             <div>
               <label for="phoneNum" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Phone
                 Number</label>
-              <input type="tel" id="phoneNum" required placeholder="+1 (555) 000-0000"
+              <input type="tel" id="phoneNum" required placeholder="e.g. 9876543210" inputmode="numeric" pattern="[0-9]*" maxlength="15"
                 class="w-full px-4 py-3 rounded-2xl bg-white border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-900 transition-all">
             </div>
           </div>
@@ -1364,10 +1370,17 @@
           </div>
 
           <div class="pt-2 text-center">
-            <button type="submit"
-              class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 rounded-full bg-brand-900 hover:bg-brand-800 text-white font-bold text-sm tracking-wide transition-all duration-300 shadow-float">
-              <span>Confirm Appointment Request</span>
-              <i data-lucide="calendar-check" class="w-4 h-4"></i>
+            <button type="submit" id="appointmentSubmitBtn"
+              class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 rounded-full bg-brand-900 hover:bg-brand-800 text-white font-bold text-sm tracking-wide transition-all duration-300 shadow-float disabled:opacity-75 disabled:cursor-not-allowed">
+              <span id="appointmentBtnText">Confirm Appointment Request</span>
+              <span id="appointmentBtnSpinner" class="hidden" aria-hidden="true">
+                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+                </svg>
+              </span>
+              <i data-lucide="calendar-check" class="w-4 h-4" id="appointmentBtnIcon"></i>
             </button>
             <p id="formFeedback" class="hidden text-emerald-700 font-semibold text-xs mt-3"></p>
           </div>
@@ -1508,7 +1521,7 @@
               <div>
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Phone
                   Number</label>
-                <input type="tel" id="modalPhone" required placeholder="+1 (555) 000-0000"
+                <input type="tel" id="modalPhone" required placeholder="e.g. 9876543210" inputmode="numeric" pattern="[0-9]*" maxlength="15"
                   class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-900 transition-all">
               </div>
               <div>
@@ -1542,6 +1555,9 @@
               </button>
             </div>
           </form>
+
+        </div>
+      </div>
 
           <!-- ================= SERVICE DETAILS MODAL (OPENS ON "DETAILS" CLICK) ================= -->
           <div id="serviceDetailModal"
@@ -1647,20 +1663,17 @@
             </div>
           </div>
 
-          <!-- ================= FLOATING TOAST NOTIFICATION ================= -->
+          <!-- ================= FLOATING TOAST NOTIFICATION (TOP-RIGHT) ================= -->
           <div id="toastNotification"
-            class="fixed bottom-6 right-6 z-[120] flex items-center gap-3.5 px-5 py-4 rounded-2xl bg-slate-900/95 backdrop-blur-md text-white shadow-2xl border border-slate-700/60 transform translate-y-24 opacity-0 transition-all duration-400 ease-out pointer-events-none max-w-sm">
+            role="status" aria-live="polite"
+            class="fixed top-4 right-4 sm:top-6 sm:right-6 z-[120] flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white/95 text-slate-900 shadow-[0_12px_35px_-12px_rgba(15,38,92,0.4)] border border-brand-100/90 backdrop-blur-md transform -translate-y-24 opacity-0 transition-all duration-300 ease-out pointer-events-none max-w-[calc(100vw-2rem)] sm:max-w-sm">
             <div id="toastIconBg"
-              class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
-              <i data-lucide="check-circle" class="w-5 h-5 stroke-[2.2]"></i>
+              class="w-7 h-7 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="check" class="w-4 h-4 stroke-[2.5]"></i>
             </div>
-            <div class="flex-1 pr-2">
-              <h5 id="toastTitle" class="text-sm font-bold text-white">Message Sent Successfully!</h5>
-              <p id="toastMessage" class="text-xs text-slate-300 mt-0.5">Thank you. Our care team will call you shortly.
-              </p>
-            </div>
-            <button id="closeToastBtn" type="button" class="text-slate-400 hover:text-white transition-colors">
-              <i data-lucide="x" class="w-4 h-4"></i>
+            <p id="toastMessage" class="min-w-0 truncate whitespace-nowrap text-xs sm:text-sm font-semibold text-brand-950">Request completed successfully</p>
+            <button id="closeToastBtn" type="button" class="text-slate-400 hover:text-slate-900 transition-colors p-1 rounded-full hover:bg-slate-100 flex-shrink-0" aria-label="Close notification">
+              <i data-lucide="x" class="w-3.5 h-3.5"></i>
             </button>
           </div>
 
@@ -1702,13 +1715,34 @@
             // Form Handling Feedback
             const appointmentForm = document.getElementById('appointmentForm');
             const formFeedback = document.getElementById('formFeedback');
-            appointmentForm.addEventListener('submit', (e) => {
-              e.preventDefault();
-              const patientName = document.getElementById('fullName').value;
-              formFeedback.textContent = `Thank you, ${patientName}! Your consultation request is registered. We will call you within 15 minutes.`;
-              formFeedback.classList.remove('hidden');
-              appointmentForm.reset();
-            });
+            const appointmentSubmitBtn = document.getElementById('appointmentSubmitBtn');
+            const appointmentBtnText = document.getElementById('appointmentBtnText');
+            const appointmentBtnSpinner = document.getElementById('appointmentBtnSpinner');
+            const appointmentBtnIcon = document.getElementById('appointmentBtnIcon');
+            if (appointmentForm) {
+              appointmentForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const patientName = document.getElementById('fullName').value.trim();
+                appointmentSubmitBtn.disabled = true;
+                appointmentBtnText.textContent = 'Submitting request...';
+                appointmentBtnSpinner.classList.remove('hidden');
+                appointmentBtnIcon.classList.add('hidden');
+
+                setTimeout(() => {
+                  appointmentSubmitBtn.disabled = false;
+                  appointmentBtnText.textContent = 'Confirm Appointment Request';
+                  appointmentBtnSpinner.classList.add('hidden');
+                  appointmentBtnIcon.classList.remove('hidden');
+
+                  if (formFeedback) {
+                    formFeedback.textContent = `Thank you, ${patientName}! Your consultation request is registered. We will call you within 15 minutes.`;
+                    formFeedback.classList.remove('hidden');
+                  }
+                  showToast('Appointment request sent successfully');
+                  appointmentForm.reset();
+                }, 1200);
+              });
+            }
 
             // Interactive Carousel Prev/Next Buttons with Real-Time Active State Styling
             const servicePrev = document.getElementById('servicePrev');
@@ -1895,17 +1929,15 @@
 
             // Toast Elements
             const toastNotification = document.getElementById('toastNotification');
-            const toastTitle = document.getElementById('toastTitle');
             const toastMessage = document.getElementById('toastMessage');
             const closeToastBtn = document.getElementById('closeToastBtn');
             let toastTimeout;
 
-            function showToast(title, message) {
+            function showToast(message) {
               clearTimeout(toastTimeout);
-              toastTitle.textContent = title;
               toastMessage.textContent = message;
 
-              toastNotification.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+              toastNotification.classList.remove('-translate-y-24', 'opacity-0', 'pointer-events-none');
               toastNotification.classList.add('translate-y-0', 'opacity-100');
 
               toastTimeout = setTimeout(() => {
@@ -1914,7 +1946,7 @@
             }
 
             function hideToast() {
-              toastNotification.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+              toastNotification.classList.add('-translate-y-24', 'opacity-0', 'pointer-events-none');
               toastNotification.classList.remove('translate-y-0', 'opacity-100');
             }
 
@@ -1982,24 +2014,23 @@
                   closeContactModal();
 
                   // Trigger Toast Feedback
-                  showToast(
-                    'Message Received!',
-                    `Thank you ${patientName}, Dr. Sarah Chen's desk will contact you within 15 minutes.`
-                  );
+                  showToast('Message sent successfully');
                 }, 1200);
               });
             }
 
-            // Also connect Consultation booking form to showToast for consistent UX
-            if (appointmentForm) {
-              appointmentForm.addEventListener('submit', (e) => {
-                const patientName = document.getElementById('fullName').value.trim();
-                showToast(
-                  'Appointment Requested!',
-                  `Thank you ${patientName}! Your consultation has been logged. We will call to confirm.`
-                );
+            // Enforce digits only on phone input fields
+            const phoneInputs = document.querySelectorAll('input[type="tel"]');
+            phoneInputs.forEach(input => {
+              input.addEventListener('input', function () {
+                this.value = this.value.replace(/[^0-9]/g, '');
               });
-            }
+              input.addEventListener('keypress', function (e) {
+                if (!/[0-9]/.test(e.key) && !['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'].includes(e.key)) {
+                  e.preventDefault();
+                }
+              });
+            });
 
             // Service Details Database
             const serviceDetailsData = {
