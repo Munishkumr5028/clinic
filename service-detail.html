@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title id="pageTitle">Service Details | Smile Dental Clinic</title>
+  <meta name="description"
+    content="Comprehensive dental service information, procedure steps, duration, comfort levels, and transparent pricing at Smile Dental Clinic.">
+  <meta name="author" content="Smile Dental Clinic">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#F0F6FE',
+              100: '#DEEBFD',
+              200: '#C3DCFC',
+              300: '#99C4FA',
+              400: '#64A4F6',
+              500: '#3C82F1',
+              600: '#1D62E5',
+              700: '#154DCB',
+              800: '#1740A4',
+              900: '#003366', // Reference deep navy blue
+              950: '#0F265C',
+            },
+            softBg: '#F3F6F9',
+            cardBg: '#E9EEF4',
+          },
+          borderRadius: {
+            '2xl': '1.25rem',
+            '3xl': '1.75rem',
+            '4xl': '2.5rem',
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -5px rgba(0, 51, 102, 0.06), 0 4px 12px -2px rgba(0, 51, 102, 0.03)',
+            'float': '0 20px 40px -10px rgba(0, 51, 102, 0.12)',
+            'glow': '0 0 25px rgba(29, 98, 229, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-[#F8FAFC] text-slate-800 font-sans antialiased selection:bg-brand-100 selection:text-brand-900 min-h-screen flex flex-col">
+
+  <!-- ================= TOP HEADER / NAVIGATION ================= -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group">
+          <span class="text-3xl font-black text-brand-900 tracking-tight transition-transform group-hover:scale-105">
+            Smile<span class="text-brand-500">.</span>
+          </span>
+          <span class="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-brand-50 text-brand-700 text-[11px] font-bold tracking-wide uppercase">
+            Specialized Care
+          </span>
+        </a>
+
+        <!-- Quick navigation -->
+        <div class="flex items-center gap-4">
+          <a href="index.html#services"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-slate-200 text-slate-700 font-semibold text-xs hover:border-slate-800 hover:text-slate-900 transition-all">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            <span>All Services</span>
+          </a>
+          <a href="index.html#booking"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-900 hover:bg-brand-800 text-white font-semibold text-xs tracking-wide shadow-sm transition-all">
+            <span>Book Consultation</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-1 py-10 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-xs font-semibold text-slate-400 mb-8">
+        <a href="index.html" class="hover:text-slate-700 transition-colors">Home</a>
+        <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        <a href="index.html#services" class="hover:text-slate-700 transition-colors">Dental Services</a>
+        <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        <span id="breadcrumbCurrent" class="text-brand-700">Dental Implants</span>
+      </nav>
+
+      <!-- Service Hero Header -->
+      <div class="bg-white rounded-3xl lg:rounded-4xl p-6 sm:p-10 lg:p-14 shadow-soft border border-slate-100 mb-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-5">
+            <span id="detailBadge"
+              class="inline-block px-4 py-1.5 rounded-full bg-brand-50 text-brand-700 text-xs font-bold uppercase tracking-wider">
+              Surgical Implantology
+            </span>
+            <h1 id="detailTitle" class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+              Dental Implants
+            </h1>
+            <p id="detailSubtitle" class="text-lg sm:text-xl font-medium text-slate-600">
+              Swiss grade titanium root restoration with lifelong warranty
+            </p>
+            <p id="detailDescription" class="text-slate-600 leading-relaxed text-sm sm:text-base pt-2">
+              Our titanium dental implant solutions permanently restore missing teeth with natural look, bite strength, and jawbone preservation. Using CBCT 3D robotic guidance, fixtures are placed with sub-millimeter precision and immediate aesthetics.
+            </p>
+
+            <!-- Key Metric Cards -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
+              <div class="p-4 rounded-2xl bg-[#F0F5FA] border border-blue-100/60">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Duration</span>
+                <span id="detailDuration" class="text-base font-extrabold text-slate-900 block">45 – 60 Mins</span>
+                <span class="text-[11px] text-slate-500">Same-day temporary</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-[#F0F5FA] border border-blue-100/60">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Comfort</span>
+                <span id="detailComfort" class="text-base font-extrabold text-emerald-600 block">100% Pain-Free</span>
+                <span class="text-[11px] text-slate-500">Local wand tech</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-[#F0F5FA] border border-blue-100/60">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Warranty</span>
+                <span id="detailWarranty" class="text-base font-extrabold text-slate-900 block">Lifetime</span>
+                <span class="text-[11px] text-slate-500">Straumann certified</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-[#F0F5FA] border border-blue-100/60">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Pricing</span>
+                <span id="detailPrice" class="text-base font-extrabold text-brand-900 block">$899 / fixture</span>
+                <span class="text-[11px] text-slate-500">Transparent rate</span>
+              </div>
+            </div>
+
+            <!-- Booking Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-4">
+              <a id="bookServiceBtn" href="index.html#booking"
+                class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-brand-900 hover:bg-brand-800 text-white font-bold text-sm tracking-wide shadow-float transition-all">
+                <span>Book This Treatment</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="tel:+15551234567"
+                class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-full border border-slate-200 text-slate-700 font-bold text-sm hover:border-slate-800 transition-all">
+                <i data-lucide="phone" class="w-4 h-4 text-brand-600"></i>
+                <span>Call (555) 123-4567</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Image / Visual Representation -->
+          <div class="lg:col-span-5">
+            <div id="imageContainer" class="rounded-3xl bg-slate-100 border border-slate-200/80 overflow-hidden shadow-soft h-[360px] sm:h-[420px] flex items-center justify-center relative">
+              <img id="detailImage" src="img/implant.jpg" alt="Dental Service"
+                class="w-full h-full object-cover">
+              <div id="graphicContainer" class="hidden w-full h-full flex flex-col items-center justify-center p-8 bg-gradient-to-tr from-[#cfddeb] to-[#e4eef8]">
+                <!-- Dynamic SVG or Graphic -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Detailed Procedure & Clinical Breakdown -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+        
+        <!-- Left: Step-by-Step Clinical Procedure -->
+        <div class="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-10 shadow-soft border border-slate-100">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-2xl bg-brand-50 text-brand-700 flex items-center justify-center">
+              <i data-lucide="activity" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-900">Step-by-Step Procedure</h2>
+              <p class="text-xs sm:text-sm text-slate-500">What to expect throughout your appointment</p>
+            </div>
+          </div>
+
+          <div id="stepsList" class="space-y-6 relative before:absolute before:inset-0 before:left-5 before:w-0.5 before:bg-slate-100">
+            <!-- Dynamically populated steps -->
+          </div>
+
+          <div class="mt-10 p-6 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-start gap-4">
+            <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-emerald-900">Sterilization & Safety Standard</h4>
+              <p class="text-xs sm:text-sm text-emerald-800 mt-1">
+                All procedures strictly follow ISO Class-7 sterile medical protocols and hospital-grade surgical air filtration for guaranteed patient safety.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: FAQ & Why Choose Us -->
+        <div class="lg:col-span-4 space-y-6">
+          <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-soft border border-slate-100">
+            <h3 class="text-lg font-black text-slate-900 mb-4">Why Choose Smile.</h3>
+            <ul class="space-y-3.5 text-xs sm:text-sm text-slate-600">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                <span>Certified Prosthodontists & Cosmetic Masters</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                <span>High-definition 3D CBCT digital imaging</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                <span>Zero-interest 12 & 24 month payment options</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                <span>Warm spa environment with noise-canceling audio</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Doctor In Charge -->
+          <div class="bg-brand-900 text-white rounded-3xl p-6 sm:p-8 shadow-float relative overflow-hidden">
+            <div class="relative z-10">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-brand-300 block mb-2">Lead Specialist</span>
+              <h4 id="doctorName" class="text-lg font-extrabold text-white">Dr. Sarah Mitchell, DDS</h4>
+              <p id="doctorSpecialty" class="text-xs text-slate-200 mt-1">Chief Prosthodontist & Implant Surgeon with 14+ years experience</p>
+              
+              <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-[11px] text-brand-200 block">Rating</span>
+                  <span class="text-sm font-black text-white">★ 4.9 / 5.0 (520+ Reviews)</span>
+                </div>
+                <a href="index.html#team" class="text-xs font-bold text-white underline hover:text-brand-200 transition-colors">
+                  View Profile ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Switch to Other Services -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-soft border border-slate-100">
+        <h3 class="text-xl font-black text-slate-900 mb-6">Explore Other Dental Services</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
+          <a href="service-detail.html?service=implants"
+            class="p-4 rounded-2xl border border-slate-200 hover:border-brand-900 hover:bg-brand-50/50 transition-all text-center block group">
+            <span class="text-xs font-bold text-slate-800 group-hover:text-brand-900 block">Dental Implants</span>
+            <span class="text-[11px] text-slate-400 mt-1 block">From $899</span>
+          </a>
+          <a href="service-detail.html?service=aligners"
+            class="p-4 rounded-2xl border border-slate-200 hover:border-brand-900 hover:bg-brand-50/50 transition-all text-center block group">
+            <span class="text-xs font-bold text-slate-800 group-hover:text-brand-900 block">Teeth Alignment</span>
+            <span class="text-[11px] text-slate-400 mt-1 block">From $1,450</span>
+          </a>
+          <a href="service-detail.html?service=therapeutic"
+            class="p-4 rounded-2xl border border-slate-200 hover:border-brand-900 hover:bg-brand-50/50 transition-all text-center block group">
+            <span class="text-xs font-bold text-slate-800 group-hover:text-brand-900 block">Therapeutic Dentistry</span>
+            <span class="text-[11px] text-slate-400 mt-1 block">From $320</span>
+          </a>
+          <a href="service-detail.html?service=veneers"
+            class="p-4 rounded-2xl border border-slate-200 hover:border-brand-900 hover:bg-brand-50/50 transition-all text-center block group">
+            <span class="text-xs font-bold text-slate-800 group-hover:text-brand-900 block">Aesthetic Veneers</span>
+            <span class="text-[11px] text-slate-400 mt-1 block">From $550</span>
+          </a>
+          <a href="service-detail.html?service=pediatric"
+            class="p-4 rounded-2xl border border-slate-200 hover:border-brand-900 hover:bg-brand-50/50 transition-all text-center block group">
+            <span class="text-xs font-bold text-slate-800 group-hover:text-brand-900 block">Pediatric Hygiene</span>
+            <span class="text-[11px] text-slate-400 mt-1 block">From $120</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-brand-900 text-white py-12 border-t border-brand-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:items-center sm:justify-between">
+      <div class="flex items-center justify-center sm:justify-start gap-2 mb-4 sm:mb-0">
+        <span class="text-2xl font-black text-white">Smile<span class="text-brand-400">.</span></span>
+        <span class="text-xs text-brand-300 ml-2">© 2026 Smile Dental Clinic. All rights reserved.</span>
+      </div>
+      <div class="flex items-center justify-center gap-6 text-xs text-slate-300">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="index.html#services" class="hover:text-white transition-colors">Services</a>
+        <a href="index.html#booking" class="hover:text-white transition-colors">Book Now</a>
+        <a href="index.html#about" class="hover:text-white transition-colors">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    const serviceData = {
+      implants: {
+        badge: 'Surgical Implantology',
+        title: 'Dental Implants',
+        subtitle: 'Swiss grade titanium root restoration with lifelong warranty',
+        description: 'Our titanium dental implant solutions permanently restore missing teeth with natural look, bite strength, and jawbone preservation. Using CBCT 3D robotic guidance, fixtures are placed with sub-millimeter precision and immediate aesthetics.',
+        duration: '45 – 60 Mins',
+        comfort: '100% Pain-Free',
+        warranty: 'Lifetime Warranty',
+        price: '$899 / fixture',
+        image: 'img/implant.jpg',
+        hasImage: true,
+        doctor: 'Dr. Sarah Mitchell, DDS',
+        doctorSpecialty: 'Lead Prosthodontist & Oral Surgeon (14+ yrs experience)',
+        formValue: 'Dental Implants (Single / Full Arch)',
+        steps: [
+          {
+            title: 'Digital 3D CBCT Volumetric Scan',
+            desc: 'We perform a 3-minute sub-millimeter scan of your bone structure, nerve canals, and sinus contours to formulate a robotic placement guide.'
+          },
+          {
+            title: 'Minimally-Invasive Titanium Placement',
+            desc: 'Under gentle local computerized anesthesia, biocompatible Grade-5 titanium post is placed directly into the jawbone without surgical scalpels.'
+          },
+          {
+            title: 'Osseointegration & Temporary Tooth',
+            desc: 'You walk away with an aesthetic temporary crown while the titanium integrates permanently with your natural jawbone.'
+          },
+          {
+            title: 'Custom Zirconia Ceramic Crown',
+            desc: 'A permanent translucent multi-layered zirconia crown is precision-milled and affixed, perfectly matching your adjacent teeth.'
+          }
+        ]
+      },
+      aligners: {
+        badge: 'Digital Orthodontics',
+        title: 'Teeth Alignment & Clear Aligners',
+        subtitle: 'Discreet invisible aligners with 3D AI smile line contouring',
+        description: 'Straighten crowded teeth, close gaps, and correct deep bites discreetly without unsightly metal brackets or wires. Our clear aligners are thermoformed from medical-grade polyurethane and custom tailored for ultra-comfortable daily wear.',
+        duration: '4 – 9 Months',
+        comfort: 'Gentle Micropressure',
+        warranty: 'Smile Guarantee',
+        price: '$1,450 / complete plan',
+        image: 'img/aligners.jpg',
+        hasImage: true,
+        doctor: 'Dr. Sophia Patel, BDS, MSc',
+        doctorSpecialty: 'Senior Specialist Orthodontist & Invisible Aligners Pioneer',
+        formValue: 'Teeth Alignment (Clear Aligners)',
+        steps: [
+          {
+            title: '60-Second Intraoral 3D Laser Scan',
+            desc: 'No messy or uncomfortable impression paste. Our optical wand captures 6,000 photos per second to produce a digital clone of your teeth.'
+          },
+          {
+            title: 'AI Biomechanical Movement Simulation',
+            desc: 'Watch a 3D animated video of how your teeth will shift week by week before you even start treatment.'
+          },
+          {
+            title: 'Custom Multi-Stage Aligner Trays Delivery',
+            desc: 'Receive your custom sets of BPA-free aligners. Each set is worn for 10-14 days for 22 hours per day.'
+          },
+          {
+            title: 'Refinement & Crystal Retainers',
+            desc: 'Once optimal alignment is reached, we provide custom crystal-clear retainers to preserve your dream smile for life.'
+          }
+        ]
+      },
+      therapeutic: {
+        badge: 'Endodontics & Restorative',
+        title: 'Therapeutic Dentistry & Root Canal',
+        subtitle: 'Microscopic root canal relief & bio-active ceramic fillings',
+        description: 'Save damaged teeth and eliminate excruciating nerve pain in a single gentle sitting. We utilize surgical operating microscopes with 25x magnification to eradicate deep infection while conserving 98% of your natural enamel structure.',
+        duration: '35 – 50 Mins',
+        comfort: 'Instant Pain Relief',
+        warranty: '10 Year Guarantee',
+        price: '$320 / canal restoration',
+        image: '',
+        hasImage: false,
+        graphicType: 'tooth',
+        doctor: 'Dr. Sarah Mitchell, DDS',
+        doctorSpecialty: 'Master Endodontist & Microscopic Restorative Specialist',
+        formValue: 'Therapeutic & Root Canal Care',
+        steps: [
+          {
+            title: 'Painless Computerized Wand Numbing',
+            desc: 'Gentle vibration-assisted local numbing eliminates any stinging sensation or needle anxiety immediately.'
+          },
+          {
+            title: '25x High-Magnification Micro-Cleaning',
+            desc: 'Under surgical microscopes, infected tissue is cleared using ultrasonic warm irrigants that preserve maximal tooth enamel.'
+          },
+          {
+            title: 'Airtight Warm Gutta-Percha Hermetic Seal',
+            desc: 'The canal is filled with bio-ceramic gutta-percha to prevent any re-infection from occurring.'
+          },
+          {
+            title: 'Bio-Ceramic Tooth Reconstruction',
+            desc: 'We place an invisible ceramic composite or custom onlay that restores 100% of natural biting strength.'
+          }
+        ]
+      },
+      veneers: {
+        badge: 'Aesthetic Smile Design',
+        title: 'Aesthetic Veneers & Smile Makeover',
+        subtitle: 'Ultra-thin handcrafted porcelain shells for movie-star smiles',
+        description: 'Transform chipped, discolored, or uneven teeth with handcrafted E-max ceramic veneers. At just 0.3mm thickness, they mimic the natural light refraction and translucency of youthful enamel while requiring minimal surface prep.',
+        duration: '2 Clinic Visits',
+        comfort: '100% Pain-Free',
+        warranty: '15 Year Guarantee',
+        price: '$550 / veneer',
+        image: '',
+        hasImage: false,
+        graphicType: 'veneers',
+        doctor: 'Dr. Sophia Patel, BDS, MSc',
+        doctorSpecialty: 'Smile Design Consultant & Aesthetic Veneers Artisan',
+        formValue: 'Laser Teeth Whitening',
+        steps: [
+          {
+            title: 'Facial Aesthetic Analysis & Digital Mockup',
+            desc: 'We map your facial symmetry, lips, and gum contour to digitally design the ideal proportion for your individual smile.'
+          },
+          {
+            title: 'Minimal Micro-Prep & Trial Smile',
+            desc: 'Ultra-conservative 0.3mm surface smoothing is done, followed by wearing provisional veneers so you can test drive your new look.'
+          },
+          {
+            title: 'Master Ceramicist Handcrafting',
+            desc: 'Each individual veneer is layered with dental porcelain to match natural enamel luminescence and hue depth.'
+          },
+          {
+            title: 'Permanent Resin Adhesive Bonding',
+            desc: 'The final veneers are bonded under high-intensity curing light with lifetime mechanical adhesion.'
+          }
+        ]
+      },
+      pediatric: {
+        badge: 'Preventive & Pediatric Care',
+        title: 'Pediatric & Preventive Hygiene',
+        subtitle: 'Gentle ultrasonic tartar removal and protective enamel fluoride shields',
+        description: 'Keep young and adult teeth healthy, gleaming, and plaque-free with our gentle preventive hygiene treatments. Designed specifically to cultivate positive dental associations without anxiety, fear, or harsh scraping.',
+        duration: '30 Mins',
+        comfort: 'Soothing Spa Clean',
+        warranty: 'Cavity Shielded',
+        price: '$120 / complete cleaning',
+        image: '',
+        hasImage: false,
+        graphicType: 'pediatric',
+        doctor: 'Dr. Marcus Vance, DMD',
+        doctorSpecialty: 'Pediatric Dental Specialist & Gentle Hygiene Director',
+        formValue: 'Pediatric & Preventive Care',
+        steps: [
+          {
+            title: 'Warm Ultrasonic Water Cavitation',
+            desc: 'Gentle acoustic micro-bubbles dislodge calculus and plaque comfortably without harsh metallic scraping.'
+          },
+          {
+            title: 'Air-Flow Glycine Micro-Powder Polish',
+            desc: 'Delicate natural powder cleans deep between teeth and removes beverage stains effortlessly.'
+          },
+          {
+            title: 'Organic Calcium-Fluoride Enamel Shield',
+            desc: 'A delicious protective varnish remineralizes young enamel and shields teeth against acid erosion for months.'
+          },
+          {
+            title: 'Fun Habit Guidance & Plaque Education',
+            desc: 'Kids receive gentle, encouraging coaching on effortless daily brushing techniques.'
+          }
+        ]
+      }
+    };
+
+    // Parse URL parameter: ?service=implants
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceKey = urlParams.get('service') || 'implants';
+    const data = serviceData[serviceKey] || serviceData.implants;
+
+    // Update document & metadata
+    document.title = `${data.title} | Smile Dental Clinic`;
+    document.getElementById('pageTitle').textContent = `${data.title} | Smile Dental Clinic`;
+    document.getElementById('breadcrumbCurrent').textContent = data.title;
+
+    // Populate Hero Section
+    document.getElementById('detailBadge').textContent = data.badge;
+    document.getElementById('detailTitle').textContent = data.title;
+    document.getElementById('detailSubtitle').textContent = data.subtitle;
+    document.getElementById('detailDescription').textContent = data.description;
+    document.getElementById('detailDuration').textContent = data.duration;
+    document.getElementById('detailComfort').textContent = data.comfort;
+    document.getElementById('detailWarranty').textContent = data.warranty;
+    document.getElementById('detailPrice').textContent = data.price;
+    document.getElementById('doctorName').textContent = data.doctor;
+    document.getElementById('doctorSpecialty').textContent = data.doctorSpecialty;
+
+    // Update Booking CTA link with query param
+    const bookBtn = document.getElementById('bookServiceBtn');
+    if (bookBtn) {
+      bookBtn.href = `index.html?treatment=${encodeURIComponent(data.formValue)}#booking`;
+    }
+
+    // Populate Image / Visual
+    const imgEl = document.getElementById('detailImage');
+    const graphicContainer = document.getElementById('graphicContainer');
+    if (data.hasImage && data.image) {
+      imgEl.src = data.image;
+      imgEl.classList.remove('hidden');
+      graphicContainer.classList.add('hidden');
+    } else {
+      imgEl.classList.add('hidden');
+      graphicContainer.classList.remove('hidden');
+      if (data.graphicType === 'tooth') {
+        graphicContainer.innerHTML = `
+          <div class="relative w-48 h-48 drop-shadow-2xl">
+            <svg viewBox="0 0 200 200" class="w-full h-full filter drop-shadow-[0_15px_20px_rgba(30,64,175,0.15)]">
+              <defs>
+                <linearGradient id="toothGrad2" x1="20%" y1="0%" x2="80%" y2="100%">
+                  <stop offset="0%" stop-color="#FFFFFF" />
+                  <stop offset="60%" stop-color="#F1F5F9" />
+                  <stop offset="100%" stop-color="#D8E2ED" />
+                </linearGradient>
+              </defs>
+              <path d="M50 45 C45 30, 75 25, 95 35 C115 25, 145 30, 140 45 C155 75, 150 110, 140 145 C132 170, 115 180, 108 140 C104 115, 96 115, 92 140 C85 180, 68 170, 60 145 C50 110, 45 75, 50 45 Z" fill="url(#toothGrad2)" />
+            </svg>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-600 mt-4">Microscopic Restoration</span>
+        `;
+      } else if (data.graphicType === 'veneers') {
+        graphicContainer.innerHTML = `
+          <div class="w-28 h-28 rounded-full bg-white/90 shadow-soft flex items-center justify-center text-brand-700 mb-3">
+            <i data-lucide="sparkles" class="w-14 h-14 stroke-[1.8]"></i>
+          </div>
+          <span class="font-bold text-slate-900 text-base">E-Max Porcelain Veneers</span>
+          <span class="text-xs text-slate-500 mt-1">High-translucency natural smile cosmetic makeovers</span>
+        `;
+      } else {
+        graphicContainer.innerHTML = `
+          <div class="w-28 h-28 rounded-full bg-white/90 shadow-soft flex items-center justify-center text-brand-700 mb-3">
+            <i data-lucide="heart-pulse" class="w-14 h-14 stroke-[1.8]"></i>
+          </div>
+          <span class="font-bold text-slate-900 text-base">Zero-Anxiety Gentle Care</span>
+          <span class="text-xs text-slate-500 mt-1">Certified gentle pediatric and preventative wellness</span>
+        `;
+      }
+    }
+
+    // Populate Steps
+    const stepsList = document.getElementById('stepsList');
+    stepsList.innerHTML = '';
+    data.steps.forEach((step, idx) => {
+      const stepDiv = document.createElement('div');
+      stepDiv.className = 'flex items-start gap-4 relative';
+      stepDiv.innerHTML = `
+        <div class="w-10 h-10 rounded-2xl bg-brand-100 text-brand-800 flex items-center justify-center font-black text-sm flex-shrink-0 z-10 shadow-sm border border-brand-200">
+          ${idx + 1}
+        </div>
+        <div class="pt-1">
+          <h4 class="text-base font-bold text-slate-900">${step.title}</h4>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">${step.desc}</p>
+        </div>
+      `;
+      stepsList.appendChild(stepDiv);
+    });
+
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
